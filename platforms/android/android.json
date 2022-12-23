@@ -1,0 +1,141 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {
+      "AndroidManifest.xml": {
+        "parents": {
+          "/manifest": [
+            {
+              "xml": "<uses-feature android:name=\"android.software.leanback\" android:required=\"false\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-feature android:name=\"android.hardware.touchscreen\" android:required=\"false\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-feature android:name=\"android.hardware.camera\" android:required=\"false\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-feature android:name=\"android.hardware.camera.autofocus\" android:required=\"false\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-feature android:name=\"android.hardware.microphone\" android:required=\"false\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-feature android:name=\"android.hardware.wifi\" android:required=\"false\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-feature android:name=\"android.hardware.bluetooth\" android:required=\"false\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-feature android:name=\"android.hardware.location\" android:required=\"false\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-feature android:name=\"android.hardware.location.gps\" android:required=\"false\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-feature android:name=\"android.hardware.location.network\" android:required=\"false\" />",
+              "count": 1
+            },
+            {
+              "xml": "<uses-feature android:name=\"android.hardware.telephony\" android:required=\"false\" />",
+              "count": 1
+            }
+          ],
+          "/manifest/application/activity/intent-filter": [
+            {
+              "xml": "<category android:name=\"android.intent.category.DEFAULT\" />",
+              "count": 1
+            },
+            {
+              "xml": "<category android:name=\"android.intent.category.LAUNCHER\" />",
+              "count": 1
+            },
+            {
+              "xml": "<category android:name=\"tv.ouya.intent.category.APP\" />",
+              "count": 1
+            },
+            {
+              "xml": "<category android:name=\"android.intent.category.LEANBACK_LAUNCHER\" />",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "res/xml/config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "config.xml": {
+        "parents": {
+          "/*": [
+            {
+              "xml": "<feature name=\"RemoteInjection\"><param name=\"android-package\" value=\"com.truckmovers.cordova.RemoteInjectionPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"ExitApp\"><param name=\"android-package\" value=\"cordova.custom.plugins.exitapp.ExitApp\" /></feature>",
+              "count": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  "installed_plugins": {
+    "cordova-plugin-android-tv": {
+      "PACKAGE_NAME": "stream.tv.app"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "stream.tv.app"
+    },
+    "cordova-plugin-remote-injection": {
+      "PACKAGE_NAME": "stream.tv.app"
+    },
+    "cordova.custom.plugins.exitapp": {
+      "PACKAGE_NAME": "stream.tv.app"
+    }
+  },
+  "dependent_plugins": {},
+  "modules": [
+    {
+      "id": "cordova-plugin-device.device",
+      "file": "plugins/cordova-plugin-device/www/device.js",
+      "pluginId": "cordova-plugin-device",
+      "clobbers": [
+        "device"
+      ]
+    },
+    {
+      "id": "cordova.custom.plugins.exitapp.exitApp",
+      "file": "plugins/cordova.custom.plugins.exitapp/www/ExitApp.js",
+      "pluginId": "cordova.custom.plugins.exitapp",
+      "merges": [
+        "navigator.app"
+      ]
+    }
+  ],
+  "plugin_metadata": {
+    "cordova-plugin-android-tv": "1.0.0",
+    "cordova-plugin-device": "2.1.0",
+    "cordova-plugin-remote-injection": "0.5.2",
+    "cordova.custom.plugins.exitapp": "1.0.0"
+  }
+}
