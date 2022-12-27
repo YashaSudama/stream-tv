@@ -70,6 +70,12 @@
               "xml": "<category android:name=\"android.intent.category.LEANBACK_LAUNCHER\" />",
               "count": 1
             }
+          ],
+          "/*": [
+            {
+              "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
+              "count": 1
+            }
           ]
         }
       },
@@ -78,6 +84,10 @@
           "/*": [
             {
               "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"NetworkStatus\"><param name=\"android-package\" value=\"org.apache.cordova.networkinformation.NetworkManager\" /></feature>",
               "count": 1
             }
           ]
@@ -92,6 +102,26 @@
             },
             {
               "xml": "<feature name=\"ExitApp\"><param name=\"android-package\" value=\"cordova.custom.plugins.exitapp.ExitApp\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<allow-navigation href=\"http://localhost/*\" />",
+              "count": 1
+            },
+            {
+              "xml": "<allow-navigation href=\"https://localhost/*\" />",
+              "count": 1
+            },
+            {
+              "xml": "<allow-navigation href=\"ionic://*\" />",
+              "count": 1
+            },
+            {
+              "xml": "<preference name=\"webView\" value=\"com.ionicframework.cordova.webview.IonicWebViewEngine\" />",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"IonicWebView\"><param name=\"android-package\" value=\"com.ionicframework.cordova.webview.IonicWebView\" /></feature>",
               "count": 1
             }
           ]
@@ -110,6 +140,12 @@
       "PACKAGE_NAME": "stream.tv.app"
     },
     "cordova.custom.plugins.exitapp": {
+      "PACKAGE_NAME": "stream.tv.app"
+    },
+    "cordova-plugin-ionic-webview-signosoft-fork": {
+      "PACKAGE_NAME": "stream.tv.app"
+    },
+    "cordova-plugin-network-information": {
       "PACKAGE_NAME": "stream.tv.app"
     }
   },
@@ -130,12 +166,38 @@
       "merges": [
         "navigator.app"
       ]
+    },
+    {
+      "id": "cordova-plugin-ionic-webview-signosoft-fork.IonicWebView",
+      "file": "plugins/cordova-plugin-ionic-webview-signosoft-fork/src/www/util.js",
+      "pluginId": "cordova-plugin-ionic-webview-signosoft-fork",
+      "clobbers": [
+        "Ionic.WebView"
+      ]
+    },
+    {
+      "id": "cordova-plugin-network-information.network",
+      "file": "plugins/cordova-plugin-network-information/www/network.js",
+      "pluginId": "cordova-plugin-network-information",
+      "clobbers": [
+        "navigator.connection"
+      ]
+    },
+    {
+      "id": "cordova-plugin-network-information.Connection",
+      "file": "plugins/cordova-plugin-network-information/www/Connection.js",
+      "pluginId": "cordova-plugin-network-information",
+      "clobbers": [
+        "Connection"
+      ]
     }
   ],
   "plugin_metadata": {
     "cordova-plugin-android-tv": "1.0.0",
     "cordova-plugin-device": "2.1.0",
     "cordova-plugin-remote-injection": "0.5.2",
-    "cordova.custom.plugins.exitapp": "1.0.0"
+    "cordova.custom.plugins.exitapp": "1.0.0",
+    "cordova-plugin-ionic-webview-signosoft-fork": "5.0.2",
+    "cordova-plugin-network-information": "3.0.0"
   }
 }

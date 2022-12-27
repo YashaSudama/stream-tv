@@ -3,12 +3,21 @@
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
+    <feature name="NetworkStatus">
+        <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
+    </feature>
     <feature name="RemoteInjection">
         <param name="android-package" value="com.truckmovers.cordova.RemoteInjectionPlugin" />
         <param name="onload" value="true" />
     </feature>
     <feature name="ExitApp">
         <param name="android-package" value="cordova.custom.plugins.exitapp.ExitApp" />
+    </feature>
+    <allow-navigation href="http://localhost/*" />
+    <allow-navigation href="https://localhost/*" />
+    <allow-navigation href="ionic://*" />
+    <feature name="IonicWebView">
+        <param name="android-package" value="com.ionicframework.cordova.webview.IonicWebView" />
     </feature>
     <name>Stream-TV</name>
     <description>
@@ -17,7 +26,8 @@
     <author email="dev@cordova.apache.org" href="http://cordova.io">
         Apache Cordova Team
     </author>
-    <content src="https://testtv.cast-tv.app/" />
+    <content src="index.html" />
+    <allow-navigation href="https://testtv.cast-tv.app/*" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -27,5 +37,7 @@
     <allow-intent href="geo:*" />
     <allow-intent href="market:*" />
     <preference name="loglevel" value="DEBUG" />
+    <preference name="webView" value="com.ionicframework.cordova.webview.IonicWebViewEngine" />
     <preference name="loadUrlTimeoutValue" value="700000" />
+    <preference name="Scheme" value="https" />
 </widget>

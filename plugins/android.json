@@ -18,6 +18,12 @@
     },
     "cordova.custom.plugins.exitapp": {
       "PACKAGE_NAME": "stream.tv.app"
+    },
+    "cordova-plugin-ionic-webview-signosoft-fork": {
+      "PACKAGE_NAME": "stream.tv.app"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "stream.tv.app"
     }
   },
   "dependent_plugins": {}
