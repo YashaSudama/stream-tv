@@ -1,6 +1,6 @@
 function deviceReady() {
 
-    if ( navigator.connection.type === 'none' ) {
+    function netWorkNone() {
         let modalWindow = document.createElement( 'div' );
         modalWindow.className = 'modal-window';
         document.body.prepend( modalWindow );
@@ -14,14 +14,42 @@ function deviceReady() {
         let btnUpdate = document.getElementById( 'btnUpdate' );
         btnUpdate.focus();
         btnUpdate.onclick = () => window.location.reload();
-        errorLog.innerHTML += device.uuid;
+    }
+
+    if ( navigator.connection.type === 'none' ) {
+        netWorkNone();
     } else {
-        window.location.replace( 'https://testtv.cast-tv.app' );
+        let checkNetwork = new XMLHttpRequest();
+        checkNetwork.open( 'GET', 'https://airband.cast-tv.app/WS/PlayerAPI/GetJsonService.asmx/CheckClient_BoxID?BoxID=' + device.uuid + '&IP=178.136.233.7' );
+
+        checkNetwork.timeout = 3000;
+
+        checkNetwork.ontimeout = function() {
+            netWorkNone();
+        }
+
+        checkNetwork.onerror = function() {
+            netWorkNone();
+        }
+        
+        checkNetwork.onload = function() {
+            let checkNetworkResponse = JSON.parse( checkNetwork.response );
+
+            if ( typeof( checkNetworkResponse ) === 'object' ) {
+                window.location.replace( 'https://testtv.cast-tv.app' ); 
+            } else {
+                netWorkNone();
+            }
+
+        }
+
+        checkNetwork.send();
+    
     }
 
 }
 
-if ( window.navigator.userAgent.includes( 'Android' ) ) {
+if ( device.platform === 'Android' ) { 
     document.addEventListener( "deviceready", deviceReady, false );
 } else { 
     deviceReady();

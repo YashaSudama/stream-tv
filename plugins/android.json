@@ -13,6 +13,9 @@
     "cordova-plugin-device": {
       "PACKAGE_NAME": "stream.tv.app"
     },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "stream.tv.app"
+    },
     "cordova-plugin-remote-injection": {
       "PACKAGE_NAME": "stream.tv.app"
     },
@@ -20,9 +23,6 @@
       "PACKAGE_NAME": "stream.tv.app"
     },
     "cordova-plugin-ionic-webview-signosoft-fork": {
-      "PACKAGE_NAME": "stream.tv.app"
-    },
-    "cordova-plugin-network-information": {
       "PACKAGE_NAME": "stream.tv.app"
     }
   },

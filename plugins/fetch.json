@@ -39,18 +39,18 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-ionic-webview-signosoft-fork": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-ionic-webview-signosoft-fork@5.0.2"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
   "cordova-plugin-network-information": {
     "source": {
       "type": "registry",
       "id": "cordova-plugin-network-information@3.0.0"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-ionic-webview-signosoft-fork": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-ionic-webview-signosoft-fork@5.0.2"
     },
     "is_top_level": true,
     "variables": {}

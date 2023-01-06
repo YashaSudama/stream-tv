@@ -30,8 +30,8 @@
       "cordova-plugin-device": {},
       "cordova-plugin-remote-injection": {},
       "cordova.custom.plugins.exitapp": {},
-      "cordova-plugin-ionic-webview-signosoft-fork": {},
-      "cordova-plugin-network-information": {}
+      "cordova-plugin-network-information": {},
+      "cordova-plugin-ionic-webview-signosoft-fork": {}
     },
     "platforms": [
       "android"
