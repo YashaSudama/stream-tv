@@ -1,6 +1,7 @@
 function deviceReady() {
 
     function netWorkNone() {
+        navigator.splashscreen.hide();
         let modalWindow = document.createElement( 'div' );
         modalWindow.className = 'modal-window';
         document.body.prepend( modalWindow );
@@ -22,7 +23,7 @@ function deviceReady() {
         let checkNetwork = new XMLHttpRequest();
         checkNetwork.open( 'GET', 'https://airband.cast-tv.app/WS/PlayerAPI/GetJsonService.asmx/CheckClient_BoxID?BoxID=' + device.uuid + '&IP=178.136.233.7' );
 
-        checkNetwork.timeout = 3000;
+        checkNetwork.timeout = 6000;
 
         checkNetwork.ontimeout = function() {
             netWorkNone();
@@ -49,8 +50,4 @@ function deviceReady() {
 
 }
 
-if ( device.platform === 'Android' ) { 
-    document.addEventListener( "deviceready", deviceReady, false );
-} else { 
-    deviceReady();
-}
+document.addEventListener( "deviceready", deviceReady, false );

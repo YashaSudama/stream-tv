@@ -24,6 +24,26 @@
         <preference name="Scheme" value="https" />
         <preference name="ResolveServiceWorkerRequests" value="true" />
         <preference name="Hostname" value="cast-tv.app" />
+        <preference name="SplashMaintainAspectRatio" value="true" />
+        <preference name="SplashShowOnlyFirstTime" value="false" />
+        <preference name="AutoHideSplashScreen" value="false" />
+        <!-- <preference name="ShowSplashScreenSpinner" value="false"/> -->
+
+        <splash src="www/img/splashscreen/android/splash-land-xhdpi.png" density="land-xhdpi" />
+        <splash src="www/img/splashscreen/android/splash-land-xxhdpi.png" density="land-xxhdpi" />
+        <splash src="www/img/splashscreen/android/splash-land-xxxhdpi.png" density="land-xxxhdpi" />
+
+        <splash src="www/img/splashscreen/android/splash-port-xhdpi.png" density="port-xhdpi" />
+        <splash src="www/img/splashscreen/android/splash-port-xxhdpi.png" density="port-xxhdpi" />
+        <splash src="www/img/splashscreen/android/splash-port-xxxhdpi.png" density="port-xxxhdpi" /> 
+        
+        <icon src="www/img/icon/android/icon-ldpi.png" density="ldpi" />
+        <icon src="www/img/icon/android/icon-mdpi.png" density="mdpi" />
+        <icon src="www/img/icon/android/icon-hdpi.png" density="hdpi" />
+        <icon src="www/img/icon/android/icon-xhdpi.png" density="xhdpi" />
+        <icon src="www/img/icon/android/icon-xxhdpi.png" density="xxhdpi" />
+        <icon src="www/img/icon/android/icon-xxxhdpi.png" density="xxxhdpi" />
+
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />

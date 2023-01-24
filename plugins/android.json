@@ -24,6 +24,9 @@
     },
     "cordova-plugin-ionic-webview-signosoft-fork": {
       "PACKAGE_NAME": "stream.tv.app"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "stream.tv.app"
     }
   },
   "dependent_plugins": {}

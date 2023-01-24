@@ -39,6 +39,14 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "clobbers": [
         "Ionic.WebView"
       ]
+    },
+    {
+      "id": "cordova-plugin-splashscreen.SplashScreen",
+      "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+      "pluginId": "cordova-plugin-splashscreen",
+      "clobbers": [
+        "navigator.splashscreen"
+      ]
     }
   ];
   module.exports.metadata = {
@@ -47,6 +55,7 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-network-information": "3.0.0",
     "cordova-plugin-remote-injection": "0.5.2",
     "cordova.custom.plugins.exitapp": "1.0.0",
-    "cordova-plugin-ionic-webview-signosoft-fork": "5.0.2"
+    "cordova-plugin-ionic-webview-signosoft-fork": "5.0.2",
+    "cordova-plugin-splashscreen": "6.0.2"
   };
 });
